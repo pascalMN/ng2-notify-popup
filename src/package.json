@@ -1,5 +1,5 @@
 {
-  "name": "ng2-notify-popup",
+  "name": "ng5-notify-popup",
   "version": "0.1.25",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
     "email": "shubhangi140793@gmail.com"
   },
   "keywords": [
-    "angular2", "angular4", "notify", "ng-notify", "angular-notification"
+    "angular5", "notify", "ng-notify", "angular-notification"
   ],
   "license": "MIT",
   "bugs": {
@@ -20,7 +20,7 @@
   "module": "ng2-notify-popup.js",
   "typings": "ng2-notify-popup.d.ts",
   "peerDependencies": {
-    "@angular/core": "^4.0.0",
+    "@angular/core": "^5.0.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

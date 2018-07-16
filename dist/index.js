@@ -82,27 +82,25 @@ var ComponentInjectService = (function () {
     }
     /**
      * Gets the root view container to inject the component to.
-    
-    \@returns {ComponentRef<any>}
-    
-    \@memberOf InjectionService
+     *
+     *
+     * \@memberOf InjectionService
      * @return {?}
      */
     ComponentInjectService.prototype.getRootViewContainer = function () {
         if (this._container)
             return this._container;
-        var /** @type {?} */ rootComponents = ((this.applicationRef))['_rootComponents'];
-        if (rootComponents.length)
-            return rootComponents[0];
+        var /** @type {?} */ rootComponents = this.applicationRef.components[0];
+        if (rootComponents)
+            return rootComponents;
         throw new Error('View Container not found! ngUpgrade needs to manually set this via setRootViewContainer.');
     };
     /**
      * Overrides the default root view container. This is useful for
-    things like ngUpgrade that doesn't have a ApplicationRef root.
-    
-    \@param {any} container
-    
-    \@memberOf InjectionService
+     * things like ngUpgrade that doesn't have a ApplicationRef root.
+     *
+     *
+     * \@memberOf InjectionService
      * @param {?} container
      * @return {?}
      */
@@ -111,11 +109,9 @@ var ComponentInjectService = (function () {
     };
     /**
      * Gets the html element for a component ref.
-    
-    \@param {ComponentRef<any>} componentRef
-    \@returns {HTMLElement}
-    
-    \@memberOf InjectionService
+     *
+     *
+     * \@memberOf InjectionService
      * @param {?} componentRef
      * @return {?}
      */
@@ -124,10 +120,9 @@ var ComponentInjectService = (function () {
     };
     /**
      * Gets the root component container html element.
-    
-    \@returns {HTMLElement}
-    
-    \@memberOf InjectionService
+     *
+     *
+     * \@memberOf InjectionService
      * @return {?}
      */
     ComponentInjectService.prototype.getRootViewContainerNode = function () {
@@ -135,12 +130,9 @@ var ComponentInjectService = (function () {
     };
     /**
      * Projects the inputs onto the component
-    
-    \@param {ComponentRef<any>} component
-    \@param {*} options
-    \@returns {ComponentRef<any>}
-    
-    \@memberOf InjectionService
+     *
+     *
+     * \@memberOf InjectionService
      * @param {?} component
      * @param {?} options
      * @return {?}
@@ -157,14 +149,9 @@ var ComponentInjectService = (function () {
     };
     /**
      * Appends a component to a adjacent location
-    
-    \@template T
-    \@param {Type<T>} componentClass
-    \@param {*} [options={}]
-    \@param {Element} [location=this.getRootViewContainerNode()]
-    \@returns {ComponentRef<any>}
-    
-    \@memberOf InjectionService
+     *
+     *
+     * \@memberOf InjectionService
      * @template T
      * @param {?} componentClass
      * @param {?=} options

@@ -24,8 +24,8 @@ export class ComponentInjectService {
     getRootViewContainer(): ComponentRef<any> {
         if (this._container) return this._container;
 
-        const rootComponents = (<any>this.applicationRef)['_rootComponents'];
-        if (rootComponents.length) return rootComponents[0];
+        const rootComponents = this.applicationRef.components[0];
+        if (rootComponents) return rootComponents;
 
         throw new Error('View Container not found! ngUpgrade needs to manually set this via setRootViewContainer.');
     }
