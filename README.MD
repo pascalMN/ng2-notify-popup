@@ -1,5 +1,5 @@
-# ng2-notify-popup
-##### for Angular 4.x.
+# ng5-notify-popup
+##### for Angular 5.x.
 Based on [ ng-notify ](https://matowens.github.io/ng-notify/) for Angular 1.x by Mat Owens
 
 ## [ View Demo ](https://shubhi1407.github.io/ng2-notify-popup/)
@@ -7,7 +7,7 @@ Based on [ ng-notify ](https://matowens.github.io/ng-notify/) for Angular 1.x by
 ## Installation
 
 ```bash
-$ npm install --save ng2-notify-popup
+$ npm install --save ng5-notify-popup
 ```
 ## Usage
 Configure your System.config
@@ -18,14 +18,14 @@ System.config({
     '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
     "rxjs": "node_modules/rxjs",
     ...
-    'ng2-notify-popup' : 'npm:ng2-notify-popup',
+    'ng5-notify-popup' : 'npm:ng5-notify-popup',
   },
   packages: {        
     'app': {
       main : './main.ts',
       defaultJSExtensions : 'ts'
     },
-    "ng2-notify-popup" : {
+    "ng5-notify-popup" : {
       main:'./index.js',
       defaultExtension : 'js'
     }
@@ -46,7 +46,7 @@ Run `npm install --save web-animations-js`.
 import 'web-animations-js';  
 
 // Import library
-import { NgNotifyPopup } from 'ng2-notify-popup';
+import { NgNotifyPopup } from 'ng5-notify-popup';
 
 @NgModule({
   declarations: [
@@ -68,7 +68,7 @@ Once your library is imported, you can use its Notification service
 ```typescript
 // You can now use this library service to show popup anywhere in angular app
 import { Component } from '@angular/core';
-import { NotificationService } from 'ng2-notify-popup';
+import { NotificationService } from 'ng5-notify-popup';
 
 @Component({
   selector: 'app-root',
